@@ -8,7 +8,7 @@
 html,body{
     height: 100vh;
     width: 100vh;
-    background-image: url('img.jpeg');
+    background-image: url('bg.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100%;
@@ -22,8 +22,8 @@ h1 {
     -webkit-text-stroke: 1px #f1eaea;
   }
 .main{
-    box-shadow: 0px 0px 45px #a94285;
-    background-image: linear-gradient(to right,white ,#ffc0cbd3);
+    box-shadow: 0px 0px 45px #428ea9;
+    background-image: linear-gradient(to right,white ,#30bffdd3);
     width: 98%;
     max-width: 570px;
     margin-left: auto;
@@ -36,7 +36,7 @@ h1 {
     padding: 30px;
     padding-right: 30px;
 }
-.search input{
+#temperature{
     width: 100%;
     color: #000000;
     border-color: #000000;
@@ -48,21 +48,44 @@ h1 {
     /* margin-right: 55px; */
     font-size: 15px;
 }
-.Temperature{
+#unit{
     width: 100%;
     color: #8f7373;
-    border-color: #000000;
+    border-color: #000;
     border: 10;
     outline: 0;
     flex: 1;
-    padding: 10px 45px 10px 95px;
+    padding: 10px 35px 10px 125px;
     border-radius: 30px;
     margin-top: 15px;
-    margin-left: 10px;
-    font-size: 17px;
+    margin-left: 0px;
+    font-size: 15px;
 
 }
-.button{
+
+#buttons button{
+    width: 50%;
+    background-color: white;
+    border-color: #000;
+    border: 5;
+    outline: 0;
+    flex: 1;
+    margin-top: 15px;
+    padding: 5px;
+    border-radius: 50px;
+    font-size: 15px;
+    color: #8f7373;
+    /* font-weight: bold; */
+    cursor: pointer;
+}
+
+#result{
     width: 100%;
+    color: #8f7373;
+    border-color: #000;
     border-radius: 30px;
+    margin-top: 15px;
+    font-weight: bold;
+
+    color: #000;
 }
