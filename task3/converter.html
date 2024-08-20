@@ -1,1 +1,62 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Temperature converter</title>
+    <link rel="stylesheet"href="./style.css">
+</head>
+<body>
+    
+    <h1 style="color:rgb(12, 11, 11)">Temperature converter</h1>
+    <div class="main">
+        
+            <input type="number"id="temperature"placeholder="Enter Temperature">
+        <select id="unit" >
+            <option>--select--</option>
+            <option value="c">convert to celsius</option>
+            <option value="f">convert to fahrenheit</option>
+            <option value="k">convert to kelvin</option>
+        </select>
+        <div id="buttons">
+            <button onclick="convertTemperature()">Convert</button>
+            <button onclick="resetButton()">Reset</button>
+        </div>    
+    
+    <div id="result">
+      
+    </div>
+    </div>
+    <script>
+        function convertTemperature(){
+            const temperature=parseFloat(document.getElementById("temperature").value);
+            
+            const unit = document.getElementById("unit").value;
+           
+            var result;
+            
+        
+        if (isNaN(temperature)) {
+        document.getElementById("result").textContent = "Please enter a valid number.";
+        return;
+      }
+      
+      if (unit === "c") {
+        result = temperature;
+      } else if (unit === "f") {
+        result = (temperature * (9/5)) + 32;
+      } else {
+        result = temperature + 273.15;
+      }
+      var resultUnit = unit === "c" ? "°C" : (unit === "f" ? "°F" : "°K");
+      document.getElementById("result").textContent = result.toFixed(2) + " " + resultUnit;
+    }
+    function resetButton() {
+            document.getElementById("temperature").value = "";
+            document.getElementById("unit").value = "";
+            document.getElementById("result").textContent = "";
+        }
+    </script>
+    
+</body>
+</html> 
